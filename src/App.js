@@ -5,8 +5,8 @@ import Body from "./components/body";
 import Footer from "./components/footer";
 
 export default class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: "Chat",
       chatsList: [
@@ -30,8 +30,21 @@ export default class App extends Component {
         user1: "https://bootdey.com/img/Content/avatar/avatar1.png",
         user2: "https://bootdey.com/img/Content/avatar/avatar2.png",
       },
-      // input: "hi",
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+  }
+  handleSubmit(message) {
+    console.log(message);
+    this.setState((state) => {
+      return {
+        ...state,
+        chatsList: [
+          ...state.chatsList,
+          { type: "sent", message, time: new Date().toLocaleTimeString() },
+        ],
+      };
+    });
   }
 
   render() {
@@ -44,7 +57,9 @@ export default class App extends Component {
               gravatar={this.state.gravatar}
               chatsList={this.state.chatsList}
             />
-            <Footer update_Chat_list={this.setState} />
+            <Footer handleSubmit={this.handleSubmit} />
+            {console.log("fdf")}
+
           </div>
         </div>
       </div>
