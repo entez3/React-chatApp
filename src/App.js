@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import Header from "./components/header";
 import Body from "./components/body";
+import Footer from "./components/footer";
 
 export default class App extends Component {
   state = {
@@ -35,22 +36,7 @@ export default class App extends Component {
           <div className="panel" id="chat">
             <Header title={this.state.title} />
             <Body gravatar={this.state.gravatar} chatsList={this.state.chatsList} />
-            <div className="panel-footer">
-              <form>
-                <div className="input-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Say something"
-                  />
-                  <span className="input-group-btn">
-                    <button className="btn btn-primary" type="button">
-                      Send
-                    </button>
-                  </span>
-                </div>
-              </form>
-            </div>
+            <Footer/>
           </div>
         </div>
       </div>
