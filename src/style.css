@@ -3,6 +3,15 @@ body {
   margin-top: 10px;
 }
 
+.panel-body{
+  background-color: #060042;
+}
+
+.panel-heading{
+  background-color: #024f97;
+  color: #fff;
+}
+
 .chat-box {
   height: 100%;
   width: 100%;
@@ -43,7 +52,7 @@ body {
   margin: 0 20px 10px 0;
   clear: both;
   color: #fff;
-  background-color: #62a8ea;
+  background-color: #376e2b;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
@@ -106,8 +115,8 @@ body {
 }
 
 .panel-footer {
-  padding: 0 30px 15px;
-  background-color: transparent;
+  padding:  13px 20px;
+  background-color: #024f97;
   border-top: 1px solid transparent;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;

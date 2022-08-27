@@ -25,7 +25,7 @@ function Footer(props) {
                     />
                     <span className="input-group-btn">
                         <button
-                            className="btn btn-primary"
+                            className="btn btn-danger"
                             type="button"
                             onClick={handleSubmit}>
                             Send
